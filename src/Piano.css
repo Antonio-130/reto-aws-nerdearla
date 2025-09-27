@@ -1,0 +1,110 @@
+.piano-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.controls button.recording {
+  background: #dc3545;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.piano {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.key {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.1s;
+}
+
+.key.white {
+  width: 50px;
+  height: 200px;
+  background: white;
+  color: black;
+  z-index: 1;
+}
+
+.key.black {
+  width: 30px;
+  height: 120px;
+  background: #333;
+  color: white;
+  position: relative;
+  margin: 0 -15px;
+  z-index: 2;
+}
+
+.key:hover {
+  background: #f0f0f0;
+}
+
+.key.black:hover {
+  background: #555;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.recordings {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recording-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.recording-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.recording-item button:first-of-type {
+  background: #28a745;
+  color: white;
+}
+
+.recording-item button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
